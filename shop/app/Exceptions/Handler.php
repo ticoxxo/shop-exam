@@ -48,8 +48,9 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
 
-            return response()->json(['DING DING! no tienes permiso para ver está página']);
+           // return response()->json(['DING DING! no tienes permiso para ver está página']);
     
+           return response() -> view('errors.'.'403',[],403);
         }
         return parent::render($request, $exception);
     }
