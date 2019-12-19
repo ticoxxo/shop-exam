@@ -101,6 +101,8 @@ class ProductController extends Controller
 
             'detail' => 'required',
 
+            'price' => 'required',
+
         ]);
 
 
@@ -179,6 +181,8 @@ class ProductController extends Controller
             'name' => 'required',
 
             'detail' => 'required',
+
+            'price' => 'required',
 
         ]);
 

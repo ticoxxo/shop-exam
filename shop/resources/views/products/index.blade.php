@@ -49,6 +49,8 @@
 
             <th>Details</th>
 
+            <th>Price</th>
+
             <th width="280px">Action</th>
 
         </tr>
@@ -62,6 +64,8 @@
 	        <td>{{ $product->name }}</td>
 
 	        <td>{{ $product->detail }}</td>
+
+            <td>{{ $product->price }}</td>
 
 	        <td>
 
