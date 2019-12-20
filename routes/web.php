@@ -1,5 +1,5 @@
 <?php
-
+use App\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $products = Product::latest()->paginate(5);
+
+    return view('welcome', compact('products'))
+
+    ->with('i', (request()->input('page', 1) - 1) * 5);
+
+    //return view('welcome');
 });
 
 Auth::routes();
@@ -27,4 +33,10 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::resource('products','ProductController');
 
+    Route::post('/cart-add', 'CartController@add')->name('cart.add');
+    
+    Route::get('/cart-checkout', 'CartController@cart')->name('cart.checkout');
+    
+    Route::post('/cart-clear', 'CartController@clear')->name('cart.clear');
+    
 });

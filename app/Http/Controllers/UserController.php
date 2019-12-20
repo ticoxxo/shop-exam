@@ -36,9 +36,9 @@ class UserController extends Controller
     {
 
         //  $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','show']]);
-         $this->middleware('permission:role-list|role-create|role-edit|role-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:role-list|role-create|role-edit|role-delete', ['only' => ['index','store']]);
          $this->middleware('permission:product-create', ['only' => ['create','store']]);
-         $this->middleware('permission:client', ['only' => ['','']]);
+
          $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
 
          $this->middleware('permission:product-delete', ['only' => ['destroy']]);

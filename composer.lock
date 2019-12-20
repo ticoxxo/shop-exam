@@ -5132,8 +5132,8 @@
             ],
             "authors": [
                 {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
+                    "name": "Alberto Almeida",
+                    "email": "ticoxxo@gmail.com"
                 }
             ],
             "description": "Assertions to validate method input/output with nice error messages.",

@@ -54,7 +54,11 @@
                     <!-- Right Side Of Navbar -->
 
                     <ul class="navbar-nav ml-auto">
-
+                    
+                    <a class="btn btn-outline-primary btn-sm ml-3" href="{{route('cart.checkout')}}">
+                    <i class="fa fa-shopping-cart"></i> Cart Total Qty 
+                    <span class="badge badge-light">{{Cart::getTotalQuantity()}}</span>
+                    </a> 
                         <!-- Authentication Links -->
 
                         @guest
